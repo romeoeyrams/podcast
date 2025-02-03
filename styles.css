@@ -1,0 +1,1935 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Kanit", sans-serif;
+}
+
+:root {
+    --bg-color: #white;
+    --second-bg-color: #131313;
+    --primary-color: #ea0505;
+    --text-color: black;
+    --main-color: #00ffee;
+    --white: #ffff;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header css starts here */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 4rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+}
+
+.logo img {
+    height: 66px;
+    width: 66px;
+}
+
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo span {
+    text-shadow: 0 0 25px var(--primary-color);
+    margin-top: 2rem;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar .login{
+    width:71px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navbar .subscribe{
+    width:71px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 1px solid var(--white);
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--primary-color);
+    display: none;
+}
+
+/* Header css ends here */
+
+/* Sections css starts here */
+section {
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+    overflow-x: hidden;
+}
+
+.heading {
+    font-size: 8rem;
+    text-decoration: center;
+    margin: 5rem 0;
+    text-align: center;
+}
+
+/* Sections css ends here */
+
+/* Home css starts here */
+.home {
+    background-image: url(./images/Rectangle\ 1.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+    z-index: 1;
+}
+
+.home::after{
+  background: rgba(0, 0, 0, 0.301); /* Adjust the opacity as needed */
+  content: "";
+  position: absolute;
+  background-color: black;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  z-index: -111;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: left;
+    margin-top: 3rem;
+    margin-left: -80rem;
+}
+
+.home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+    color: var(--primary-color);
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+    color: var(--white);
+}
+
+.media_player {
+    margin-top: 10rem;
+}
+
+.media_player img {
+    height: 71px;
+    width: 352px;
+}
+
+.listeners {
+    margin-top: 10rem;
+}
+
+.listener-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--white);
+}
+
+.listener-info2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    h4 {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+}
+
+.listener-avatar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border-radius: 100%;
+    font-weight: 350;
+    background-color: #3f3b3b;
+    margin: -0.4rem;
+    transition: 0.3s ease-in-out;
+}
+
+.listener-avatar:hover {
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+/* Home css ends here */
+
+/* Episode css starts here */
+.episode {
+    padding: 100px 15px;
+    background: var(--white-color);
+}
+
+.episode h2 {
+    margin-bottom: 5rem;
+}
+
+/* Episode css ends here */
+
+
+/* Trending css starts here */
+.trending .popular_n_trending {
+    display: flex;
+}
+
+.trending .headings {
+    display: flex;
+    gap: 45%;
+    margin-bottom: 70px;
+}
+
+.trending .headings .heading_title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.trending .headings .trending_podcast {
+    font-size: 20px;
+    font-weight: 400;
+    color: #00000080;
+    cursor: pointer;
+}
+
+.trending .popular_n_trending .pnt_image .female_presenter {
+    margin-left: -5rem;
+}
+
+.trending .popular_n_trending .row .right {
+    margin-left: 10rem;
+    text-wrap: nowrap;
+}
+
+.trending .popular_n_trending .row .jonathan_edem {
+    color: #00000080;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.trending .popular_n_trending .row .podcast_description {
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.trending .popular_n_trending .row .date p {
+    color: #00000080;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.trending .popular_n_trending .row .date span {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 400;
+
+}
+
+.trending .popular_n_trending .row .description {
+    color: #00000080;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+.trending .popular_n_trending .row .popular_n_trending_bottom {
+    display: flex;
+    margin-top: 5rem;
+}
+
+.trending .popular_n_trending .row .right .popular_n_trending_bottom {
+    margin-top: 20px;
+}
+
+.trending .popular_n_trending .row .popular_n_trending_bottom img {
+    height: 41px;
+    width: 41px;
+    cursor: pointer;
+}
+
+.trending .popular_n_trending .row .popular_n_trending_bottom .episode {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 22px;
+    color: #000000CC;
+    margin-top: -12rem;
+}
+
+.trending .popular_n_trending .row .popular_n_trending_bottom span {
+    font-size: 15px;
+    font-weight: 400;
+    color: #00000080;
+}
+
+.trending .popular_n_trending .row .popular_n_trending_bottom button {
+    color: #fff;
+    background-color: #000000;
+    height: 50px;
+    width: 140px;
+    border-radius: 25px;
+    margin-left: 41px;
+    cursor: pointer;
+}
+
+/* Trending css ends here */
+
+
+/* Explore css starts here */
+.explore h2 {
+    margin-bottom: 5rem;
+    color: black;
+}
+
+.explore .explore_headings {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.explore .explore_headings .heading_title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: -15px;
+}
+
+.explore .explore_headings .links {
+    display: flex;
+    justify-content: center;
+}
+
+
+.explore .explore_headings .links .category-btn {
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    color: black;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #00000080;
+    margin: 0 0.5rem;
+    border-radius: 0.9rem;
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+}
+
+.explore .explore_headings .links .category-btn.active {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+
+
+.explore .explore_headings .links .category-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+.explore-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.explore-box {
+    background-color: var(--white);
+    height: 146px;
+    width: 481px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0px 9px 40px 0px #00000026;
+    border-radius: 15px;
+}
+
+.explore-box:hover {
+    background: white;
+    color: black;
+    border: 2px solid var(--primary-color);
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--primary-color);
+    transform: scale(1.03);
+}
+
+
+.explore-box .small_playcard_image_placeholder {
+    height: 108px;
+    width: 139px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.explore-box .image_placeholder_text {
+    margin-left: 20rem;
+    margin-top: -12rem;
+}
+
+
+.explore-box .image_placeholder_text h3 {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.explore-box .image_placeholder_text p {
+    color: #00000080;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.explore-box .image_placeholder_text .music_bar {
+    height: 15px;
+    width: 220px;
+    margin-left: 0rem;
+    margin-top: 0.1rem;
+    cursor: pointer;
+}
+
+.explore-box .control_icons {
+    margin-left: 23rem;
+    margin-top: -4.5rem;
+}
+
+
+.explore-box .control_icons .pausebar1 {
+    height: 13px;
+    width: 2px;
+    margin-right: 10px;
+}
+
+.explore-box .control_icons .pausebar2 {
+    height: 13px;
+    width: 2px;
+    margin-left: -20px;
+}
+
+.explore-box .control_icons .next {
+    height: 13px;
+    width: 10px;
+    margin-left: 15px;
+}
+
+
+/* Offer css starts here */
+.offer {
+    margin-top: -10rem;
+}
+
+.offer .offer_heading {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.offer .offer_details {
+    font-size: 20px;
+    font-weight: 400;
+    color: #00000080;
+    text-align: center;
+}
+
+.offer .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10rem;
+}
+
+.offer .wrapper .offer_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+.offer .wrapper .offer_details h3 {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #000000;
+}
+
+.offer .wrapper p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #00000080;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.offer .high_quality_audio img {
+    height: 42px;
+    width: 47px;
+    text-align: center;
+}
+
+.offer .multi_platform img {
+    height: 56px;
+    width: 91px;
+}
+
+.offer .interesting_content img {
+    height: 58px;
+    width: 58px;
+}
+
+.offer .lot_of_podcast img {
+    height: 58px;
+    width: 58px;
+}
+
+
+/* Offer css ends here */
+
+
+
+@media (min-width: 1281px) {
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: left;
+        justify-content: left;
+        margin-top: 4rem;
+        margin-left: -65rem;
+    }
+
+    .media_player {
+        margin-top: 5rem;
+    }
+
+
+    .listeners {
+        margin-top: 5rem;
+    }
+
+    .trending .headings{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .explore-box {
+        margin-left: -3rem;
+        width: 440px;
+    }
+
+    .explore-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5rem;
+    }
+
+    .trending .headings .trending_podcast{
+        margin-top: 3rem;
+    }
+
+    .trending .popular_n_trending {
+        display: flex;
+        margin-left: 60rem;
+    }
+
+    .trending .popular_n_trending .pnt_image .female_presenter {
+        height: 30rem;
+        margin-top: -20rem;
+        margin-left: -20px;
+    }
+
+    .trending .popular_n_trending .pnt_image .male_presenter {
+        height: 50rem;
+        margin-left: -60rem;
+    }
+
+    .trending .popular_n_trending .row .description {
+        margin-left: -5px;
+        text-wrap: nowrap;
+    }
+
+    /* Explore css */
+    .explore .explore_headings {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .explore-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 15rem;
+        margin-left: 3rem;
+    }
+
+    /* Newsletter css starts here */
+    .newsletter {
+        position: relative;
+        color: var(--white);
+        bottom: 0;
+        width: 1280px;
+        height: 396px;
+        padding: 40px 0;
+        background-color: black;
+        border-radius: 50px;
+        margin-top: 10rem;
+        margin-bottom: 15rem;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: hidden;
+    }
+
+    .newsletter .left {
+        padding: 5rem 0 0 10rem;
+    }
+
+    .newsletter .left h3 {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .newsletter .left p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .newsletter .left form {
+        margin-top: 5rem;
+    }
+
+    .newsletter .left input {
+        height: 47px;
+        width: 208px;
+        border-radius: 30px;
+        background: transparent;
+        color: var(--white);
+        border: 1px solid var(--white);
+    }
+
+    .newsletter .left button {
+        height: 47px;
+        width: 165px;
+        border-radius: 30px;
+        background-color: var(--white);
+        color: var(--text-color);
+        margin-left: 3rem;
+        cursor: pointer;
+    }
+
+    .newsletter .right img {
+        height: 400px;
+        width: 830px;
+        margin-top: -30.7rem;
+        margin-left: 55rem;
+    }
+
+
+    /* Newsletter css ends here */
+}
+
+
+
+/* 
+  ##Device = Laptops, Desktops  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: left;
+        justify-content: left;
+        margin-top: 5rem;
+        margin-left: -40rem;
+    }
+
+    /* Trending css for (min-width: 1025px) and (max-width: 1280px) starts here */
+    .trending .headings {
+        display: flex;
+        gap: 30%;
+        margin-bottom: 70px;
+        text-wrap: nowrap;
+    }
+
+    .trending .headings .heading_title {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .trending .headings .trending_podcast {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+
+    .trending .popular_n_trending .pnt_image .male_presenter {
+        height: 333px;
+        width: 245px;
+    }
+
+    .trending .popular_n_trending .pnt_image .female_presenter {
+        height: 240px;
+        width: 180px;
+        margin-left: 20rem;
+        margin-top: -50rem;
+    }
+
+    .trending .popular_n_trending .row .right {
+        margin-left: 10rem;
+        margin-top: -3rem;
+    }
+
+    .trending .popular_n_trending .row .jonathan_edem {
+        font-size: 23px;
+        font-weight: 400;
+    }
+
+    .trending .popular_n_trending .row .podcast_description {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: -8px;
+    }
+
+    .trending .popular_n_trending .row .date p {
+        font-size: 19px;
+        font-weight: 400;
+        margin-top: -8px;
+    }
+
+    .trending .popular_n_trending .row .date span {
+        font-size: 19px;
+        font-weight: 400;
+    }
+
+    .trending .popular_n_trending .row .description {
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 4px;
+        text-wrap: nowrap;
+    }
+
+    .trending .popular_n_trending .row .popular_n_trending_bottom {
+        margin-top: 2rem;
+    }
+
+    .trending .popular_n_trending .row .popular_n_trending_bottom img {
+        height: 31px;
+        width: 31px;
+        cursor: pointer;
+    }
+
+    .trending .popular_n_trending .row .popular_n_trending_bottom .episode {
+        font-size: 15px;
+        font-weight: 500;
+        text-wrap: nowrap;
+    }
+
+    .trending .popular_n_trending .row .popular_n_trending_bottom button {
+        color: #fff;
+        background-color: #000000;
+        height: 30px;
+        width: 100px;
+        border-radius: 25px;
+        margin-left: 41px;
+        cursor: pointer;
+    }
+
+    /* Trending css for (min-width: 1025px) and (max-width: 1280px) ends here */
+
+    /* Explore css for (min-width: 1025px) and (max-width: 1280px) starts here */
+    .explore {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -20rem;
+    }
+
+    .explore .explore_headings {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        text-wrap: nowrap;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .explore .explore_headings .heading_title {
+        font-size: 30px;
+    }
+
+    .explore .explore_headings .links .category-btn {
+        padding: 0.5rem;
+        font-size: 15px;
+        color: #00000080;
+        margin-top: -5px;
+        cursor: pointer;
+    }
+
+    .explore-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 13rem;
+    }
+
+    .explore-box {
+        height: 146px;
+        width: 380px;
+        cursor: pointer;
+    }
+
+    .explore-box .small_playcard_image_placeholder {
+        height: 108px;
+        width: 139px;
+        border-radius: 10px;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+
+    .explore-box .image_placeholder_text {
+        margin-left: 17rem;
+        margin-top: -11rem;
+    }
+
+
+    .explore-box .image_placeholder_text .music_bar {
+        height: 15px;
+        width: 190px;
+        margin-left: 0rem;
+        margin-top: 0.1rem;
+        cursor: pointer;
+    }
+
+    .explore-box .control_icons {
+        margin-left: 18rem;
+        margin-top: -4.5rem;
+    }
+
+
+    .explore-box .control_icons .pausebar1 {
+        height: 13px;
+        width: 2px;
+        margin-right: 10px;
+    }
+
+    .explore-box .control_icons .pausebar2 {
+        height: 13px;
+        width: 2px;
+        margin-left: -20px;
+    }
+
+    .explore-box .control_icons .next {
+        height: 13px;
+        width: 10px;
+        margin-left: 15px;
+    }
+
+    /* Testimonial css for (min-width: 1025px) and (max-width: 1280px) starts here */
+    /* .testimonials-box {
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .testimonials .testimonial_our_reviews {
+        margin-bottom: 5rem;
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .testimonials .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+
+    .testimonial-item {
+        min-height: 387px;
+        max-width: 359px;
+        background-color: #fff;
+        border-radius: 2rem;
+        padding: 30px 30px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+        color: white;
+        transition: 0.4s ease-in-out;
+    } */
+
+    /* Testimonial css for (min-width: 1025px) and (max-width: 1280px) starts here */
+
+    /* Offer */
+    .offer .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10rem;
+    }
+
+    /* Offer */
+
+    /* Pricing css for (min-width: 1025px) and (max-width: 1280px) starts here */
+    .pricing-box {
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20rem;
+        margin-bottom: 5rem;
+    }
+
+    .pricing .heading {
+        margin-bottom: 2rem;
+    }
+
+
+    .pricing .price_plan {
+        margin-bottom: 5rem;
+    }
+
+    .pricing .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    /* Princing css for (min-width: 1025px) and (max-width: 1280px) starts here */
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #menu-icon {
+        display: block;
+      }
+      .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        transition: 0.25s ease;
+        transition-delay: 0.25s;
+        display: none;
+      }
+      .navbar.active {
+        display: block;
+      }
+      .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+      }
+
+      .logo {
+        margin-left: -27rem;
+    }
+    
+    .home {
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: left;
+        justify-content: left;
+        margin-top: -4rem;
+        margin-left: -20rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+        margin-left: 5rem;
+    }
+
+    .home-content h1 {
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+
+    .home-content p {
+        max-width: 600px;
+        margin-left: 5rem;
+    }
+
+    .media_player {
+        margin-top: 5rem;
+    }
+
+    .listeners {
+        margin-top: 5rem;
+    }
+
+    .pricing .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact form {
+        flex-direction: column;
+    }
+
+   
+    .explore {
+        padding-bottom: 7rem;
+    }
+
+    .explore h2 {
+        margin-bottom: 3rem;
+    }
+
+    .explore-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+
+}
+
+
+
+/* Testimonial css starts here */
+/* .testimonials {
+    background-image: url(./images/Mask.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem 0;
+}
+
+.testimonials-box {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.testimonials .heading {
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.testimonials .testimonial_our_reviews {
+    margin-bottom: 5rem;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.slider-btn {
+    background-color: white;
+    width: 55px;
+    height: 55px;
+    padding: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-top: 20rem;
+  }
+
+  .slider-btn img{
+    width: 18.86px;
+    height: 26.71px;
+  }
+
+  .slider-btn:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .slider-btn:hover img {
+    filter: invert(1);
+  }
+
+.testimonial-item {
+    min-height: 387px;
+    max-width: 359px;
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 30px 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    color: white;
+    transition: 0.4s ease-in-out;
+    margin-bottom: 10rem;
+}
+
+.testimonial-item .card_title {
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    text-wrap: nowrap;
+    padding-bottom: 20px;
+}
+
+.testimonial-item .podcast {
+    color: #00000080;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.testimonial-item .podcast span {
+    color: #000000;
+    padding-left: 2rem;
+}
+
+.testimonial-item .card_details {
+    color: #000000b2;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.testimonial-item .card-footer {
+    display: flex;
+    gap: 5%;
+}
+
+.testimonial-item .card-footer .img_details {
+    margin-top: 3rem;
+}
+
+.testimonial-item img {
+    margin-top: 3rem;
+    height: 66px;
+    width: 66px;
+}
+
+.testimonial-item .name {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.testimonial-item .profession {
+    color: #00000080;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.testimonial-item:hover {
+    border: 3px solid var(--primary-color);
+    transform: translateY(-10px)scale(1.03);
+    box-shadow: 0 0 50px var(--primary-color);
+} */
+/* Testimonial css ends here */
+
+.testimonials {
+    width: 100%;
+    height: 43rem;
+    background: url(./images/Mask.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 0;
+}
+
+.testimonials .heading {
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.testimonials .testimonial_our_reviews {
+    margin-bottom: 5rem;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.testimonials h2:nth-of-type(1) {
+    font-weight: 300;
+}
+
+.testimonials-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 3rem;
+}
+
+.slider-btn {
+    background-color: white;
+    width: 55px;
+    height: 55px;
+    padding: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.slider-btn img {
+    width: 18.86px;
+    height: 26.71px;
+}
+
+.slider-btn:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.slider-btn:hover img {
+    filter: invert(1);
+}
+
+
+.testimonials .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.testimonial-card {
+    width: 359px;
+    height: 387px;
+    border-radius: 15px;
+    padding: 30px 30px;
+    background-color: var(--white);
+    transition: 0.4s ease-in-out;
+}
+
+.testimonial-card:hover {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--primary-color);
+    transform: scale(1.03);
+} 
+
+.testimonial-card h3 {
+font-size: 25px;
+font-weight: 600;
+}
+
+.testimonial-card h3 span {
+    color: #00000080;
+    margin-right: 1rem;
+}
+
+.testimonial-card p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000B2;
+    margin-top: 2rem;
+}
+
+.card_footer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+
+.card_footer img{
+    height: 64px;
+    width: 64px;
+}
+
+.card_footer .img_details .name{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.card_footer .img_details .profession{
+    font-size: 14px;
+    font-weight: 400;
+    color: #00000080;
+    margin-top: -0.5rem;
+}
+
+/* Pricing css starts here */
+.toggles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.toggle-container {
+    display: inline-block;
+    position: relative;
+    width: 114px;
+    height: 46px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.toggle-checkbox:checked+.toggle-label {
+    background-color: var(--primary-color);
+}
+
+.toggle-checkbox:checked+.toggle-label .toggle-thumb {
+    transform: translateX(70px);
+}
+
+.pricing .pricing_heading {
+    color: #000000;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: -15rem;
+    margin-bottom: 20px;
+}
+
+.pricing .pricing_plan {
+    color: #00000080;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.pricing .monthly_yearly_payment {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    gap: 50px;
+}
+
+
+.pricing .monthly_yearly_payment .pay_monthly {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.pricing .monthly_yearly_payment .pay_yearly {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.pricing-box {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20rem;
+    margin-bottom: 5rem;
+}
+
+.pricing .heading {
+    margin-bottom: 2rem;
+}
+
+
+.pricing .price_plan {
+    margin-bottom: 5rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.pricing-item {
+    min-height: 666px;
+    max-width: 418px;
+    background-color: #fff;
+    border-radius: 60px;
+    padding: 30px 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    color: white;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0px 9px 40px 0px #00000026;
+}
+
+.pricing-item:hover {
+    background-color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    transform: translateY(-10px)scale(1.03);
+    box-shadow: 0 0 50px var(--primary-color);
+    color: white;
+}
+
+.pricing-item:hover .card_title {
+    filter: invert(1);
+}
+
+.pricing-item:hover .card_details {
+    color: var(--white);
+}
+
+.pricing-item:hover .cost {
+    filter: invert(1);
+}
+
+.pricing-item:hover .list1 {
+    filter: invert(1);
+}
+
+.pricing-item .card_title {
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    text-wrap: nowrap;
+    padding-bottom: 20px;
+}
+
+.pricing-item .card_details {
+    color: #00000080;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.pricing-item .cost {
+    font-size: 96px;
+    font-weight: 500;
+    color: black;
+    margin-top: 10px;
+}
+
+.pricing-item .cost span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #00000080;
+    margin-left: 20px;
+    margin-top: -50;
+}
+
+.pricing-item button {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #000000;
+    border-radius: 30px;
+    height: 50px;
+    width: 352px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+}
+
+.pricing-item .list {
+    margin-top: 20px;
+}
+
+.pricing-item .list {
+    margin-top: 20px;
+}
+
+.pricing-item .list .list1 {
+    margin-top: 10px;
+}
+
+.pricing-item .list .list1 .bullet1 {
+    height: 32px;
+    width: 32px;
+}
+
+.pricing-item .list .list1 .list_para {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    margin-left: 50px;
+    margin-top: -30px;
+}
+
+.pricing-item .list .list1 .list_para_grey {
+    font-size: 18px;
+    font-weight: 500;
+    color: #00000080;
+    margin-left: 50px;
+    margin-top: -30px;
+}
+
+
+
+.testimonial-item .podcast span {
+    color: #000000;
+    padding-left: 2rem;
+}
+
+.testimonial-item .card_details {
+    color: #000000b2;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.testimonial-item .card-footer {
+    display: flex;
+    gap: 5%;
+}
+
+.testimonial-item .card-footer .img_details {
+    margin-top: 3rem;
+}
+
+.testimonial-item img {
+    margin-top: 3rem;
+    height: 66px;
+    width: 66px;
+}
+
+.testimonial-item .name {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.testimonial-item .profession {
+    color: #00000080;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.testimonial-item:hover {
+    border: 3px solid var(--primary-color);
+    transform: translateY(-10px)scale(1.03);
+    box-shadow: 0 0 50px var(--primary-color);
+}
+
+/* Pricing css ends here */
+
+
+
+
+/* Newsletter css starts here */
+
+/* Newsletter css ends here */
+
+
+/* Footer css starts here */
+/* footer css starts here */
+.footer {
+    padding: 5rem 10rem 0 10rem;
+    background-color: #000000;
+    margin-top: 100px;
+    height: 668px;
+    color: #fff;
+}
+
+.footer .footer_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .footer_container .row .footer_heading {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.footer .footer_container .row button {
+    height: 64px;
+    width: 307px;
+    border-radius: 30px;
+}
+
+.footer .footer_container .row .horizontal_line {
+    width: 1312px;
+    height: 1px;
+    color: #fff;
+    border: 1px;
+}
+
+.footer .footer_col_container {
+    display: flex;
+    gap: 3rem;
+    margin-top: 50px;
+}
+
+.footer .footer_col_container .footer_col1 {
+    flex: 3;
+}
+
+.footer .footer_col_container .footer_col1 .footer_col1_title,
+.footer_col2_title,
+.footer_col3_title,
+.footer_col4_title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.footer .footer_col_container .footer_col1 .footer_col1_para,
+.footerCol {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.footer .footer_col2,
+.footer_col3,
+.footer_col4 {
+    flex: 1;
+}
+
+.footer .footer_col_container .footer_col1_para,
+.footerCol {
+    margin-top: 20px;
+}
+
+/* footer css ends here */
+/* Footer css ends here */
+
+
+/* Media queries for 1285px starts here*/
+
+
+/* Media queries for 1285px ends here*/
+
+
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+ ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+    #menu-icon {
+        display: block;
+      }
+    
+      .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        transition: 0.25s ease;
+        transition-delay: 0.25s;
+        display: none;
+      }
+    
+      .navbar.active {
+        display: block;
+      }
+    
+      .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+      }
+   
+      .logo {
+        margin-left: -23rem;
+    }
+    
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: left;
+        justify-content: left;
+        margin-top: 1rem;
+        margin-left: -5rem;
+    }
+
+   
+    .media_player {
+        margin-top: 2rem;
+    }
+
+    .listeners {
+        margin-top: 2.1rem;
+    }
+
+    .trending .headings {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .trending .popular_n_trending{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+        margin-left: -7rem;
+    }
+
+    .trending .popular_n_trending .right .jonathan_edem,.podcast_description{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+        margin-left: -7rem;
+    }
+
+
+    .trending .popular_n_trending .pnt_image .male_presenter {
+        height: 333px;
+        width: 245px;
+    }
+
+    .trending .popular_n_trending .pnt_image .female_presenter {
+        height: 240px;
+        width: 180px;
+        margin-left: 20rem;
+        margin-top: -50rem;
+    }
+
+    
+    .explore .explore_headings{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .offer .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10rem;
+    }
+
+    .testimonials .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+
+
+    .pricing .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+
+    #menu-icon {
+        display: block;
+      }
+    
+      .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        transition: 0.25s ease;
+        transition-delay: 0.25s;
+        display: none;
+      }
+    
+      .navbar.active {
+        display: block;
+      }
+    
+      .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+      }
+
+
+      .logo {
+        margin-left: -23rem;
+    }
+    
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: left;
+        justify-content: left;
+        margin-top: 1rem;
+        margin-left: -5rem;
+    }
+
+   
+    .media_player {
+        margin-top: 2rem;
+    }
+
+    .listeners {
+        margin-top: 2.1rem;
+    }
+
+
+    .offer .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10rem;
+    }
+
+    .testimonials .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+
+
+    .pricing .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }    
+  }
+  
